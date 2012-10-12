@@ -10,6 +10,10 @@
 # ruby rm-dsstore.rb /Users/name/dir
 # ruby19 rm-dsstore.rb /Users/name/dir 'rmf'
 #---------------------------------------------------------------------
+# Mac OS X 10.8.2
+# ruby 1.9.3p125 (2012-02-16 revision 34643) [x86_64-darwin12.2.0]
+# ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]
+#
 # Mac OS X 10.7.2
 # ruby 1.9.3p0 (2011-10-30 revision 33570) [x86_64-darwin11.2.0]
 # ruby 1.8.7 (2010-01-10 patchlevel 249) [universal-darwin11.0]
