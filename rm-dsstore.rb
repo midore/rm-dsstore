@@ -2,15 +2,17 @@
 # rm-dsstore.rb
 
 #---------------------------------------------------------------------
-# usage
 # Search files named .DS_Store in ENV['HOME']
-# ruby rm-dsstore.rb
-# ruby rm-dsstore.rb "rmf"
+# usage
+# % ruby rm-dsstore.rb
+# % ruby rm-dsstore.rb 'rmf'
 # Other directory
-# ruby rm-dsstore.rb /Users/name/dir
-# ruby19 rm-dsstore.rb /Users/name/dir 'rmf'
+# % ruby rm-dsstore.rb /Volumes/dir
+# % ruby19 rm-dsstore.rb /Volumes/dir 'rmf'
 #---------------------------------------------------------------------
+#
 # Mac OS X 10.8.2
+# ruby 1.9.3p286 (2012-10-12 revision 37165) [x86_64-darwin12.2.0]
 # ruby 1.9.3p125 (2012-02-16 revision 34643) [x86_64-darwin12.2.0]
 # ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]
 #
