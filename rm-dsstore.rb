@@ -77,5 +77,5 @@ print "TargetDir: #{dir}\nOption: #{opt}\n"
 print "------------------------------\n"
 DSStore.new(dir, opt).ls_or_rm
 
-print "\n=>Time: #{Time.now - t.to_s}\n"
+print "\n=>Time: #{(Time.now - t).to_s}\n"
 
