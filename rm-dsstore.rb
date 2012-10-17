@@ -76,6 +76,6 @@ dir, opt = ARGV[0], ARGV[1] unless ARGV[1].nil?
 print "TargetDir: #{dir}\nOption: #{opt}\n"
 print "------------------------------\n"
 DSStore.new(dir, opt).ls_or_rm
-t2 = Time.now - t
-print "\n=>Time: #{t2.to_s}\n"
+
+print "\n=>Time: #{Time.now - t.to_s}\n"
 
