@@ -1,6 +1,5 @@
 # coding: utf-8
 # rm-dsstore.rb
-
 #---------------------------------------------------------------------
 # Search files named .DS_Store in ENV['HOME']
 # usage
@@ -10,11 +9,12 @@
 # % ruby rm-dsstore.rb /Volumes/dir
 # % ruby19 rm-dsstore.rb /Volumes/dir 'rmf'
 #---------------------------------------------------------------------
+# Mac OS X 10.8.3
+# ruby 1.9.3p392 (2013-02-22 revision 39386) [x86_64-darwin12.3.0]
 # Mac OS X 10.8.2
 # ruby 1.9.3p286 (2012-10-12 revision 37165) [x86_64-darwin12.2.0]
 # ruby 1.9.3p125 (2012-02-16 revision 34643) [x86_64-darwin12.2.0]
 # ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]
-#
 # Mac OS X 10.7.2
 # ruby 1.9.3p0 (2011-10-30 revision 33570) [x86_64-darwin11.2.0]
 # ruby 1.8.7 (2010-01-10 patchlevel 249) [universal-darwin11.0]
@@ -29,7 +29,6 @@ class DSStore
     @checkpath = File.exist?(path)
     @list = Array.new
   end
-
   def ls_or_rm
     return print "not found directory\n" unless @checkpath
     return print "It is not directory\n" unless @checkdir
@@ -39,7 +38,6 @@ class DSStore
       @option == 'rmf' ? sys_rm(file) : sys_ls(file)
     }
   end
-
   private
   def list
     Find.find(@path){|path|
@@ -50,11 +48,9 @@ class DSStore
     }
     return @list
   end
-
   def sys_ls(f)
     system("ls \'#{f}\'")
   end
-
   def sys_rm(f)
     system("rm \'#{f}\'")
     print "Removed: #{f}\n"
@@ -75,6 +71,5 @@ dir, opt = ARGV[0], ARGV[1] unless ARGV[1].nil?
 print "TargetDir: #{dir}\nOption: #{opt}\n"
 print "------------------------------\n"
 DSStore.new(dir, opt).ls_or_rm
-
 print "\n=>Time: #{(Time.now - t).to_s}\n"
 
